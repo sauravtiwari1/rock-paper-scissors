@@ -26,33 +26,35 @@ function getComputerChoice(){
 function playRound(user,comp){
     // make a variable win_det=0
     let win_det=0;
+    let draw_det=0;
     // create logic to determine winner
         // if st. to determine who won if won then win_det+=1
         // display win/lose and respective message of why defeated
-        if((user==="rock") && (comp==="paper")){
+        if ((user === "rock") && (comp === "paper")) {
             alert("Computer Wins! Paper wraps around Rock to immobilize it.");
-            win_det +=1;
-        }else if((user==="rock") && (comp==="scissors")){
+            win_det = -1;
+          } else if ((user === "rock") && (comp === "scissors")) {
             alert("You Win! Rock smashes Scissors.");
-            win_det +=1;
-        }else if((user==="paper") && (comp==="rock")){
+            win_det = 1;
+          } else if ((user === "paper") && (comp === "rock")) {
             alert("You Win! Paper wraps around Rock to immobilize it.");
-            win_det +=1;
-        }else if((user==="paper") && (comp==="scissors")){
+            win_det = 1;
+          } else if ((user === "paper") && (comp === "scissors")) {
             alert("Computer Wins! Scissors cuts Paper.");
-            win_det +=1;
-        }else if((user==="scissors") && (comp==="rock")){
+            win_det = -1;
+          } else if ((user === "scissors") && (comp === "rock")) {
             alert("Computer Wins! Rock smashes Scissors.");
-            win_det +=1;
-        }else if((user==="scissors") && (comp==="paper")){
+            win_det = -1;
+          } else if ((user === "scissors") && (comp === "paper")) {
             alert("You Win! Scissors cuts paper.");
-            win_det +=1;
-        }else if((user==="rock") && (comp==="rock") || (user==="paper") && (comp==="paper") || (user==="scissors") && (comp==="scissors")){
+            win_det = 1;
+          } else {
             alert("Draw");
+            draw_det = 1;
+          }
+          
+          return [win_det, draw_det];
         }
-
-
-}
 
 let userChoice=userPrompt();
 let compChoice=getComputerChoice();
