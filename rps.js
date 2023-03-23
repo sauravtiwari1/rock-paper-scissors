@@ -47,7 +47,7 @@ function playRound(user,comp){
         }else if((user==="scissors") && (comp==="paper")){
             alert("You Win! Scissors cuts paper.");
             win_det +=1;
-        }else{
+        }else if((user==="rock") && (comp==="rock") || (user==="paper") && (comp==="paper") || (user==="scissors") && (comp==="scissors")){
             alert("Draw");
         }
 
