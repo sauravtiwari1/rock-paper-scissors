@@ -13,9 +13,16 @@ userPrompt();
 console.log(userInput);
 
 // make computer pick any 3 values too in a new function called getComputerChoice
+function getComputerChoice(){
     // make array comp_val=["rock","paper","scissors"]
+    comp_val=["rock","paper","scissors"];
     // randomize value from 1-3 name that value to x  -> Math.floor(Math.random() * 3);
+    x=Math.floor(Math.random() * 3);
     // select any data from 'comp_val' using comp_val[x] into new variable called 'computerSelection'
+    computerSelection=comp_val[x];
+}
+getComputerChoice();
+console.log(computerSelection);
 
 // send the user & comp value to a new function called playRound
     // create logic to determine winner
