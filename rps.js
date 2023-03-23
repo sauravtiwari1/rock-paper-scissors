@@ -57,15 +57,15 @@ function playRound(user,comp){
         }
 
 
-        
+
 // create new function called game and call 'playRound' 5 times
 function game() {
     // create a score track system with initial value being 0 -> score_player=0, score_comp=0 & score_draw=0
     let score_player = 0;
     let score_comp = 0;
     let score_draw = 0;
-    
-    for (let i = 0; i < 5; i++) {
+    let gameTime=parseInt(prompt("How many times would you like to play?"))
+    for (let i = 0; i < gameTime; i++) {
       let userChoice = userPrompt();
       let compChoice = getComputerChoice();
       let [win_det, draw_det] = playRound(userChoice, compChoice);
