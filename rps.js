@@ -56,10 +56,33 @@ function playRound(user,comp){
           return [win_det, draw_det];
         }
 
-let userChoice=userPrompt();
-let compChoice=getComputerChoice();
-playRound(userChoice,compChoice);
 
+        
 // create new function called game and call 'playRound' 5 times
-    // create a score track system with initial value being 0 -> score_player=0 & score_comp=0
+function game() {
+    // create a score track system with initial value being 0 -> score_player=0, score_comp=0 & score_draw=0
+    let score_player = 0;
+    let score_comp = 0;
+    let score_draw = 0;
+    
+    for (let i = 0; i < 5; i++) {
+      let userChoice = userPrompt();
+      let compChoice = getComputerChoice();
+      let [win_det, draw_det] = playRound(userChoice, compChoice);
+  
         // if the value 'win_det' is 1 then score_player +=1 else score_comp +=1
+      if (win_det === 1) {
+        score_player++;
+      } else if (win_det === -1) {
+        score_comp++;
+      } else {
+        score_draw++;
+      }
+    }
+    
+    console.log(`Player score: ${score_player}`);
+    console.log(`Computer score: ${score_comp}`);
+    console.log(`Draws: ${score_draw}`);
+  }
+  
+  game();
