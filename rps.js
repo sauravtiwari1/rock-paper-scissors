@@ -1,6 +1,16 @@
-// prompt user to select rock, paper or scissors
-    // convert the prompt value to lower case by .toLowerCase()
+function userPrompt(){
+    // prompt user to select rock, paper or scissors
+    userInput=prompt("What do you choose? Rock, Paper or Scissors?");
     // create logic if value != to rock/paper/scissor then execute prompt
+    while (userInput != "rock" && userInput !="paper" && userInput !="scissors"){
+    // convert the prompt value to lower case by .toLowerCase()
+    userInput=prompt("Invalid Value! Rock, Paper or Scissors?").toLowerCase();;
+    }
+
+    return userInput;
+}
+userPrompt();
+console.log(userInput);
 
 // make computer pick any 3 values too in a new function called getComputerChoice
     // make array comp_val=["rock","paper","scissors"]
