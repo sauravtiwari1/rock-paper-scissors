@@ -84,5 +84,9 @@ function game() {
     console.log(`Computer score: ${score_comp}`);
     console.log(`Draws: ${score_draw}`);
   }
+  const btnRock=document.querySelector("#r")
+  const btnPaper=document.querySelector("#p");
+  const btnScissors=document.querySelector("#s");
+  console.log(btnRock,btnPaper,btnScissors);
   
-  game();
+  // game();
