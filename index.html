@@ -8,11 +8,21 @@
     <script src="rps.js" defer></script>
 </head>
 <body>
-    <h2>Rock Paper Scissors Game</h2>
-    <div class="main">
-        <button id="r">Rock</button>
-        <button id="p">Paper</button>
-        <button id="s">Scissors</button>
-    </div>
+    <div class="game-container">
+        <h2>Rock, Paper, Scissors</h2>
+        <div class="scoreboard">
+          <p>Player score: <span id="player-score">0</span></p>
+          <p>Computer score: <span id="computer-score">0</span></p>
+          <p>Draws: <span id="draw-score">0</span></p>
+        </div>
+        <div class="game-buttons">
+          <button class="game-button" id="rock">Rock</button>
+          <button class="game-button" id="paper">Paper</button>
+          <button class="game-button" id="scissors">Scissors</button>
+        </div>
+        <div class="game-result">
+          <p id="result-text"></p>
+        </div>
+      </div>
 </body>
 </html>
