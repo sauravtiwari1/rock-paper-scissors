@@ -17,6 +17,11 @@ function isNumberKey(evt) {
   return true;
 }
 
+function submitForm() {
+  let formValue = document.getElementById("numberInput");
+  return formValue.value;
+}
+
 // Add event listeners to buttons
 rockBtn.addEventListener('click', function() {
   playRound('rock');
