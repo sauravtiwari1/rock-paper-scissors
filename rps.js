@@ -46,46 +46,26 @@ function playRound(userChoice) {
     computerWins++;
     computerScore.textContent=computerWins;
     resultText.textContent="Computer Wins! Paper wraps around Rock to immobilize it.";
-    win_det = -1;
   } else if ((userChoice === "rock") && (compChoice === "scissors")) {
     playerWins++
     playerScore.textContent=playerWins;
     resultText.textContent="You Win! Rock smashes Scissors.";
-    win_det = 1;
   } else if ((userChoice === "paper") && (compChoice === "rock")) {
     playerWins++
     playerScore.textContent=playerWins;
     resultText.textContent="You Win! Paper wraps around Rock to immobilize it.";
-    win_det = 1;
   } else if ((userChoice === "paper") && (compChoice === "scissors")) {
     computerWins++;
     computerScore.textContent=computerWins;
     resultText.textContent="Computer Wins! Scissors cuts Paper.";
-    win_det = -1;
   } else if ((userChoice === "scissors") && (compChoice === "rock")) {
     computerWins++;
     computerScore.textContent=computerWins;
     resultText.textContent="Computer Wins! Rock smashes Scissors.";
-    win_det = -1;
   } else if ((userChoice === "scissors") && (compChoice === "paper")) {
     playerWins++
     playerScore.textContent=playerWins;
     resultText.textContent="You Win! Scissors cuts paper.";
-    win_det = 1;
-  } 
+  }
   
-} 
-  
-  // else if (
-  //   (userChoice === 'rock' && compChoice === 'scissors') ||
-  //   (userChoice === 'paper' && compChoice === 'rock') ||
-  //   (userChoice === 'scissors' && compChoice === 'paper')
-  // ) {
-  //   playerWins++;
-  //   playerScore.textContent = playerWins;
-  //   resultText.textContent = 'You Win!';
-  // } else {
-  //   computerWins++;
-  //   computerScore.textContent = computerWins;
-  //   resultText.textContent = 'Computer Wins!';
-  // }
+}
