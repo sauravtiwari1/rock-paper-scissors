@@ -7,6 +7,16 @@ const playerScore = document.querySelector('#player-score');
 const computerScore = document.querySelector('#computer-score');
 const drawScore = document.querySelector('#draw-score');
 
+
+// checks if the input value is number or not
+function isNumberKey(evt) {
+  let charCode = evt.key;
+  if (isNaN(charCode)) {
+    return false;
+  }
+  return true;
+}
+
 // Add event listeners to buttons
 rockBtn.addEventListener('click', function() {
   playRound('rock');

@@ -10,6 +10,12 @@
 <body>
     <div class="game-container">
         <h2>Rock, Paper, Scissors</h2>
+        <div class="gameTime">
+            <form>
+                <input type="text" id="numberInput" placeholder="Enter a number" onkeypress="return isNumberKey(event)" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
         <div class="scoreboard">
           <p>Player score: <span id="player-score">0</span></p>
           <p>Computer score: <span id="computer-score">0</span></p>
