@@ -1,0 +1,56 @@
+* {
+font-family: 'Luckiest Guy', cursive;
+text-align: center;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+.game-button:hover {
+background-color: #333;
+color: #fff;
+}
+
+#result-text {
+    animation: fadeinout 3s ease-in-out infinite;
+  }
+  
+  @keyframes fadeinout {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+#final-result {
+animation: coolfade 4s ease-in-out infinite;
+font-size: 24px;
+font-weight: 900;
+}
+
+@keyframes coolfade {
+0% {
+    opacity: 0;
+    transform: scale(0.2);
+}
+50% {
+    opacity: 1;
+    transform: scale(1);
+}
+100% {
+    opacity: 0;
+    transform: scale(0.5);
+}
+}
+
+
