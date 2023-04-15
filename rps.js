@@ -144,21 +144,13 @@ function mobile() {
   }
 }
 
-// Dark Mode
-function toggleDarkMode() {
-  function toggleDarkMode() {
-    const body = document.querySelector("body");
-    body.classList.toggle("dark-mode");
-    updateDarkModeIcon();
-  }
-}
 
-// change icon after click
+// toggle dark/light mode
 function toggleDarkMode() {
   const body = document.querySelector("body");
   const icon = document.querySelector("#dark-mode-button i");
 
-  body.classList.toggle("dark-mode");
+  body.classList.toggle("light-mode");
   icon.classList.toggle("fa-moon");
   icon.classList.toggle("fa-sun");
 }
