@@ -84,7 +84,7 @@ function playRound(userChoice) {
   if (roundsPlayed >= roundsToPlay) {
     // Display the final score and reset the game
     if (playerWins > computerWins) {
-      finalResult.textContent = "Game Over! You Win!";
+      finalResult.textContent = "You Win!";
     } else if (computerWins > playerWins) {
       finalResult.textContent = "Game Over! Computer Wins!";
     } else {
@@ -133,11 +133,32 @@ scissorsBtn.addEventListener('click', () => playRound("scissors"));
 // Event listener for start button
 document.querySelector(".gameTime button").addEventListener("click", startGame);
 
+
+// dropdown icon
 function mobile() {
-  var x = document.getElementById("myNavbar");
+  let x = document.getElementById("myNavbar");
   if (x.className === "navbar") {
     x.className += " responsive";
   } else {
     x.className = "navbar";
   }
+}
+
+// Dark Mode
+function toggleDarkMode() {
+  function toggleDarkMode() {
+    const body = document.querySelector("body");
+    body.classList.toggle("dark-mode");
+    updateDarkModeIcon();
+  }
+}
+
+// change icon after click
+function toggleDarkMode() {
+  const body = document.querySelector("body");
+  const icon = document.querySelector("#dark-mode-button i");
+
+  body.classList.toggle("dark-mode");
+  icon.classList.toggle("fa-moon");
+  icon.classList.toggle("fa-sun");
 }
