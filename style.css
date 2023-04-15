@@ -89,41 +89,52 @@ button {
 
 
   /* result section */
-#result-text {
-    animation: fadeinout 3s ease-in-out infinite;
-    font-size: 17px;
+  #result-text {
+    animation: pulse 2s ease-in-out infinite;
+    font-size: 16px;
     font-weight: 700;
-}
+  }
   
-  @keyframes fadeinout {
+  @keyframes pulse {
     0% {
-      opacity: 0;
+      transform: scale(1);
     }
     50% {
-      opacity: 1;
+      transform: scale(1.1);
     }
     100% {
-      opacity: 0;
+      transform: scale(1);
     }
   }
 
-#final-result {
-    animation: coolfade 4s ease-in-out infinite;
+/* This CSS will not be active by default */
+.final-result-border {
+    position: relative;
     font-size: 24px;
-    font-weight: 900;
-}
+    font-weight: 700;
+  }
 
-    @keyframes coolfade {
+.final-result-border:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid #f9b625;
+    border-radius: 25px;
+    z-index: -1;
+    animation: popup 1s ease-in-out normal;
+  }
+  
+  @keyframes popup {
     0% {
-        opacity: 0;
-        transform: scale(0.2);
+      transform: scale(1);
     }
     50% {
-        opacity: 1;
-        transform: scale(1);
+      transform: scale(1.1);
     }
     100% {
-        opacity: 0;
-        transform: scale(0.5);
+      transform: scale(1);
     }
-    }
+  }

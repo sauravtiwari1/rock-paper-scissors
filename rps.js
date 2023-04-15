@@ -90,6 +90,9 @@ function playRound(userChoice) {
     } else {
       finalResult.textContent = "Game Over! It's a Draw!";
     }
+    // Add a class to show the border and animation
+    finalResult.classList.add('final-result-border');
+
     restartBtn.textContent = "Start new game";
     document.querySelector(".end-game").appendChild(restartBtn); // Add restart button
     restartBtn.addEventListener("click", resetGame);
@@ -114,6 +117,7 @@ function resetGame() {
   // Remove final result message and restart button
   finalResult.textContent = '';
   restartBtn.remove();
+  finalResult.classList.remove('final-result-border');
 
   // Enable the number input and start button
   document.getElementById("numberInput").disabled = false;
