@@ -3,6 +3,38 @@ font-family: 'Luckiest Guy', cursive;
 text-align: center;
 }
 
+body {
+    position: relative;
+    background-image: url("./images/paper.png"), url("./images/scissors.png"), url("./images/shoot.png"), url("./images/rock.png");
+    background-repeat: no-repeat;
+    background-position: top left, top right, bottom left, bottom right;
+    background-size: auto 20%;
+    background-attachment: fixed;
+    /* default light mode styles */
+    background-color: #f2f2f2;
+    color: #202020;
+    height: 100%;
+    height: 100vh;
+  }
+
+/* Dark Mode Section */
+body.dark-mode {
+    background-color: #202020;
+    color: #f2f2f2;
+}
+.dark-mode .navbar {
+    background-color: #202020;
+  }
+  
+  .dark-mode .navbar a {
+    color: #f2f2f2;
+  }
+  
+.dark-mode input[type=text] {
+    background-color: #5a5656;
+    color: #000000;
+}
+
 /* navbar style */
 .navbar {
     position: fixed;
@@ -64,13 +96,17 @@ text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* to center it */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
 input[type=text] {
 border-radius: 25px;
 border: none;
-background-color: #f2f2f2;
+background-color: #d6d6d6;
 padding: 10px 20px;
 font-size: 16px;
 box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
