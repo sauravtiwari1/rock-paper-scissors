@@ -7,39 +7,49 @@
     <title>Rock Paper Scissors</title>
     <script src="rps.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="game-container">
-        <h1>Rock, Paper, Scissors</h1>
-        <div class="gameTime">
-            <form>
-                <input type="text" id="numberInput" placeholder="Enter a number" onkeypress="return isNumberKey(event)" required>
-                <button type="submit" onclick="startGame()">Submit</button>
-            </form>
-        </div>
-        <div class="scoreboard">
-          <p>Player score: <span id="player-score">0</span></p>
-          <p>Computer score: <span id="computer-score">0</span></p>
-          <p>Draws: <span id="draw-score">0</span></p>
-        </div>
-        <div class="game-buttons">
-          <button class="game-button" id="rock">
-            <img src="./images/rock.png" alt="Rock icon">
-          </button>
-          <button class="game-button" id="paper">
-            <img src="./images/paper.png" alt="Paper icon">
-          </button>
-          <button class="game-button" id="scissors">
-            <img src="./images/scissors.png" alt="Scissors icon">
-          </button>
-        </div>
-        <div class="game-result">
-          <p id="result-text"></p>
-          <p id="final-result"></p>
-        </div>
-        <div class="end-game">
-
-        </div>
+  <div class="navbar" id="myNavbar">
+    <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="#about"><i class="fa fa-fw fa-info-circle"></i> About</a>
+    <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="mobile()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  
+  <div class="game-container">
+    <h1>Rock, Paper, Scissors</h1>
+    <div class="gameTime">
+        <form>
+            <input type="text" id="numberInput" placeholder="Enter a number" onkeypress="return isNumberKey(event)" required>
+            <button type="submit" onclick="startGame()">Submit</button>
+        </form>
+    </div>
+      <div class="scoreboard">
+        <p>Player score: <span id="player-score">0</span></p>
+        <p>Computer score: <span id="computer-score">0</span></p>
+        <p>Draws: <span id="draw-score">0</span></p>
       </div>
+    <div class="game-buttons">
+      <button class="game-button" id="rock">
+        <img src="./images/rock.png" alt="Rock icon">
+      </button>
+      <button class="game-button" id="paper">
+        <img src="./images/paper.png" alt="Paper icon">
+      </button>
+      <button class="game-button" id="scissors">
+        <img src="./images/scissors.png" alt="Scissors icon">
+      </button>
+    </div>
+    <div class="game-result">
+      <p id="result-text"></p>
+      <p id="final-result"></p>
+    </div>
+    <div class="end-game">
+
+    </div>
+  </div>
 </body>
 </html>

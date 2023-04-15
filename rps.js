@@ -132,3 +132,12 @@ scissorsBtn.addEventListener('click', () => playRound("scissors"));
 
 // Event listener for start button
 document.querySelector(".gameTime button").addEventListener("click", startGame);
+
+function mobile() {
+  var x = document.getElementById("myNavbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
