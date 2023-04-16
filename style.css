@@ -44,6 +44,7 @@ body.light-mode {
     background-color: #3b3a3a;
     z-index: 1000;
     text-align: center;
+    opacity: 0.9;
   }
   
   .navbar a {
