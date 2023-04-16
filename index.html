@@ -5,8 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <script src="rps.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <script src="rps.js"></script>
+  <div class="navbar" id="myNavbar">
+    <a href="https://github.com/saurav-png" target="_blank"><i class="fab fa-github"></i> My GitHub</a>
+    <a href="javascript:void(0);" id="dark-mode-button" onclick="toggleDarkMode()">
+      <i class="fas fa-sun" id="moon-sun-icon"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/saurav-md/" target="_blank"><i class="fab fa-linkedin"></i> Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="mobile()">
+      <i class="fas fa-bars"></i>
+    </a>
+  </div>
+  
+  <div class="game-container">
+    <h1>Rock, Paper, Scissors</h1>
+    <div class="gameTime">
+        <form>
+            <p>How many times do you wanna play?</p>
+            <input type="text" id="numberInput" placeholder="Game of?" onkeypress="return isNumberKey(event)" required>
+            <button type="submit" onclick="startGame()">Submit</button>
+        </form>
+    </div>
+      <div class="scoreboard">
+        <p>Player score: <span id="player-score">0</span></p>
+        <p>Computer score: <span id="computer-score">0</span></p>
+        <p>Draws: <span id="draw-score">0</span></p>
+      </div>
+    <div class="game-buttons">
+      <button class="game-button" id="rock">
+        <img src="./images/rock.png" alt="Rock icon">
+      </button>
+      <button class="game-button" id="paper">
+        <img src="./images/paper.png" alt="Paper icon">
+      </button>
+      <button class="game-button" id="scissors">
+        <img src="./images/scissors.png" alt="Scissors icon">
+      </button>
+    </div>
+    <div class="game-result">
+      <p id="result-text"></p>
+      <p id="final-result"></p>
+    </div>
+    <div class="end-game">
+
+    </div>
+  </div>
 </body>
 </html>
