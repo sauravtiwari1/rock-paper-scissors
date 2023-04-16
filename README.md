@@ -25,7 +25,7 @@ A simple rock paper scissors game developed using HTML, CSS, and JavaScript.
 
 ## Where to Play?
 * #### [GitHub Deployment](https://saurav-png.github.io/rock-paper-scissors/)
-* 
+* #### [Netlify Site](https://saurav-rpsgame.netlify.app/)
 
 ## How to Play
 * Input the number of games you want to play and hit "Submit".
