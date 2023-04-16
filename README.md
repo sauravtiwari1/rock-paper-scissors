@@ -8,7 +8,7 @@ A simple rock paper scissors game developed using HTML, CSS, and JavaScript.
 * [How to Play?](#how-to-play)
 * [Dark/Light Mode](#dark-and-light-mode)
 * [Creator](#author)
-* [Credits](#dependencies)
+* [Credits](#credits)
 * [License](#license)
 
 ## Game Preview
@@ -39,10 +39,9 @@ You can toggle between dark and light modes by clicking on the sun icon in the n
 ## Author
 [Saurav Tiwari](https://www.github.com/saurav-png)
 
-## Dependencies
+## Credits
 * [Font Awesome](https://fontawesome.com/) [CDN link is included in `index.html`]
 * The game icons were sourced from [seekpng.com](https://www.seekpng.com/) and [flaticon.com](https://www.flaticon.com).
-*
 
 ## License
 This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
