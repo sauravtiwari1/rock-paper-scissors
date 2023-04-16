@@ -1,12 +1,29 @@
-function userPrompt(){
-    // prompt user to select rock, paper or scissors
-    userInput=prompt("What do you choose? Rock, Paper or Scissors?");
-    // create logic if value != to rock/paper/scissor then execute prompt
-    while (userInput != "rock" && userInput !="paper" && userInput !="scissors"){
-    // convert the prompt value to lower case by .toLowerCase()
-    userInput=prompt("Invalid Value! Rock, Paper or Scissors?").toLowerCase();;
-    }
+// Get UI elements
+const rockBtn = document.querySelector('#rock');
+const paperBtn = document.querySelector('#paper');
+const scissorsBtn = document.querySelector('#scissors');
+const resultText = document.querySelector('#result-text');
+const playerScore = document.querySelector('#player-score');
+const computerScore = document.querySelector('#computer-score');
+const drawScore = document.querySelector('#draw-score');
+const finalResult = document.querySelector('#final-result');
+const restartBtn = document.createElement('button');
+
+let roundsToPlay;
+let roundsPlayed = 0;
+let playerWins = 0;
+let computerWins = 0;
+let draws = 0;
+
+// checks if the input value is number or not
+function isNumberKey(evt) {
+  let charCode = evt.key;
+  if (isNaN(charCode)) {
+    return false;
   }
+  return true;
+}
+
 function startGame() {
   // Get the number of rounds to play
   const formValue = document.getElementById("numberInput").value;
