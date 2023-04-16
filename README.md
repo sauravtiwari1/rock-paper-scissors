@@ -4,7 +4,7 @@ A simple rock paper scissors game developed using HTML, CSS, and JavaScript.
 ## Table of Contents
 * [Game Preview](#game-preview)
 * [Features](#features)
-* [Where to Play?](#where-to-play-?)
+* [Where to Play?](#where-to-play)
 * [How to Play?](#how-to-play)
 * [Dark/Light Mode](#dark-and-light-mode)
 * [Creator](#author)
